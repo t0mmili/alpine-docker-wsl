@@ -1,5 +1,5 @@
-# The base image; last version with http repositories
-FROM alpine:3.12.12
+# The base image
+FROM alpine:3.14
 
 # Non-root user
 ARG USER
@@ -31,4 +31,3 @@ RUN update-ca-certificates --fresh
 # Add wsl config file
 COPY ./conf/wsl.conf /etc/wsl.conf
 RUN /bin/ash -c 'echo "default = ${USER}" >> /etc/wsl.conf'
-

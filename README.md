@@ -29,9 +29,3 @@ DOCKER_BUILDKIT=1 docker build --build-arg USER=myuser --build-arg PASS=PassW0rd
 wsl --import alpine-docker-wsl .\alpine-docker-wsl .\alpine-docker-wsl.tar.gz
 wsl --distribution alpine-docker-wsl
 ```
-
-## Why Alpine 3.12?
-> source: https://github.com/alpinelinux/docker-alpine/issues/160
-
-Since 3.13 Alpine is using https for accessing package repositories. This leads in many cases to ssl errors.  
-Version 3.12.12 works perfect in my experience, but feel free to change it if you like.
